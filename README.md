@@ -5,7 +5,7 @@
 <h3>#环境要求</h3>
 <p>laravel 5.6</p>
 <h3>#表设计</h3>
-<p><i>建表语句SQL在rbac目录里</i></p>
+<p><i>建表SQL语句在rbac目录里</i></p>
 <h5>用户表</h5>
 <table>
     <tbody>
