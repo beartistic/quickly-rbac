@@ -2,6 +2,8 @@
 <br/><br/>quickly-rbac目前已支持的特性：<br/>菜单管理：无限级菜单分配、前台菜单切换、菜单排序、通知设置。<br/>路由管理：CRUD<br/>权限管理：CRUD<br/>用户管理：CRUD<br/>用户管理：CRUD</h5>
 <h5><a href="http://admin.seeyou.biz/menu/getlist">后台体验</a>  账号：test 密码：123456
 <br/><a href="http://admin.seeyou.biz/web/index">应用体验</a></h5>
+<h3>#环境要求</h3>
+<p>laravel 5.6</p>
 <h3>#表设计</h3>
 <p><i>建表语句SQL在rbac目录里</i></p>
 <h5>用户表</h5>
