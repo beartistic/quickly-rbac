@@ -1,10 +1,10 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 118.31.47.62
+Source Server         : 127.0.0.1
 Source Server Version : 50726
-Source Host           : 118.31.47.62:3306
-Source Database       : rbr9emum4g
+Source Host           : 127.0.0.1:3306
+Source Database       : app
 
 Target Server Type    : MYSQL
 Target Server Version : 50726
