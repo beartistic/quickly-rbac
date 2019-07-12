@@ -3,6 +3,7 @@
 <h5><a href="http://admin.seeyou.biz/menu/getlist">后台体验</a>  账号：test 密码：123456
 <br/><a href="http://admin.seeyou.biz/web/index">应用体验</a></h5>
 <h3>#表设计</h3>
+<p><i>建表语句SQL在rbac目录里</i></p>
 <h5>用户表</h5>
 <table>
     <tbody>
