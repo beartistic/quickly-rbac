@@ -6,10 +6,13 @@
 <br/><a href="http://admin.seeyou.biz/web/index">应用体验</a></h5>
 <h3>#环境要求</h3>
 <p>laravel 5.6</p>
-<h3>如何使用</h3>
+<h3>#如何使用</h3>
 <p>
 实现功能 -> 添加路由 -> 角色授权 -> 用户权限
 </p>
+<p><img src="https://raw.githubusercontent.com/beartistic/quickly-rbac/master/screenshot/1.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/beartistic/quickly-rbac/master/screenshot/2.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/beartistic/quickly-rbac/master/screenshot/3.jpg"></p>
 <h3>#表设计</h3>
 <p><i>建表SQL语句在rbac目录里</i></p>
 <h5>用户表</h5>
