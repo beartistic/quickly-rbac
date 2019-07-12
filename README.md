@@ -8,7 +8,7 @@
 <p>laravel 5.6</p>
 <h3>#如何使用</h3>
 <p>
-实现功能 -> 添加路由 -> 角色授权 -> 用户权限
+实现功能 -> 添加路由 -> 角色授权 -> 权限管理
 </p>
 <p><img src="https://raw.githubusercontent.com/beartistic/quickly-rbac/master/screenshot/1.jpg"></p>
 <p><img src="https://raw.githubusercontent.com/beartistic/quickly-rbac/master/screenshot/2.jpg"></p>
