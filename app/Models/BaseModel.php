@@ -227,7 +227,7 @@ class BaseModel
     public static function format2Array(&$result, $key1, $key2='')
     {
         $records = array();
-        //if param $key2 given format kv group like "a:b" or "a:b,c:d"
+        //if param $key2 formatted kv group like "a:b" or "a:b,c:d"
         if (substr_count($key2, ',') != 0 || substr_count($key2, ':') != 0) {
             $key2 = explode(',', $key2);
             foreach ($result as $k=> $v) {

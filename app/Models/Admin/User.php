@@ -70,6 +70,18 @@ class User extends BaseModel
     {
         setcookie("admin_user", "", time() - 3600, "/");
     }
+    
+    public static function register(&$params)
+    {
+        $params['create_time'] = date("Y-m-d H:i:s");
+        return DB::table(self::LOGIN_TABLE)->insertGetId($params);
+    }
+
+    public static function hasOne($username)
+    {
+        $result = DB::table(self::LOGIN_TABLE)->where([['username', $username]])->first();
+        return empty($result) ? false : true;
+    }
 
     public static function login(&$params)
     {
@@ -87,7 +99,7 @@ class User extends BaseModel
     {
         list($where, $bindValues) = BaseModel::Factory()->getConditions($params);
         $user = \DB::selectOne("select * from {$table} where {$where}", $bindValues);
-        return ['user' => $user->username];
+        return ['user' => $user->username ?? ''];
     }
     
 }

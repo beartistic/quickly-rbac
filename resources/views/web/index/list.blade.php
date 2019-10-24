@@ -119,8 +119,9 @@ $category_id = '';
                         <div class="col-sm-4 text-right text-center-xs" id="id_pagination"></div>
                     </div>
                     
-                  	<h4 class="m-t-lg m-b">Leave a comment</h4>
                     <!-- 来必力City版安装代码 -->
+                    <!-- 
+                  	<h4 class="m-t-lg m-b">Leave a comment</h4>
                     <div id="lv-container" data-id="city" data-uid="MTAyMC8yNzg4MS80NDU4">
                     	<script type="text/javascript">
                        (function(d, s) {
@@ -136,8 +137,10 @@ $category_id = '';
                        })(document, 'script');
                     	</script>
                     </div>
+                    -->
                     <!-- City版安装代码已完成 -->
                 </div>
+                
 
                 <div class="col-sm-3">
                   <h5 class="font-bold">分类</h5>
@@ -148,9 +151,11 @@ $category_id = '';
                   <div class="tags m-b-lg l-h-2x tag-c">
                   </div>
                   
+                  <!-- 
                   <h5 class="font-bold">最近文章</h5>
                   <div class='recent-art-c'>
                   </div>
+                   -->
                 </div>
               </div>
             </section>

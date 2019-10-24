@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route as Uri;
     $defaultRoutes = BaseModel::format2Array($routes, 'mid', 'route:is_default');
     
     ////获取菜单
-    $menusOri = Menu::getMenu(\PDO::FETCH_ASSOC);
+    $menusOri = Menu::getMenu();
     ////sort
     $sortnum = array();
     foreach ($menusOri as $k=> $v) {

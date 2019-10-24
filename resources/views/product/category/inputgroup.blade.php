@@ -94,6 +94,86 @@ use App\Models\Product\Category;
                   </ul>
                   </div>
                 </div>
+				<?php elseif ($v == "date_type"): ?>
+                <div class="col-sm-3">
+                <label><?= $v1 ?></label>
+                <div class="">
+                  <button data-toggle="dropdown" class="col-md-12 form-control btn btn-sm btn-default dropdown-toggle">
+                    <span class="dropdown-label"><?= $desc ?></span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-select">
+                  	<?php if($v3 == 'single') :?>
+                  	<li class="active">
+                      <input type="radio" name="<?= $v ?>" value="single">
+                      <a href="#">单天</a>
+                    </li>
+                    <?php elseif($v3 == 'range'): ?>
+                  	<li class="active">
+                      <input type="radio" name="<?= $v ?>" value="range">
+                      <a href="#">连续多天</a>
+                    </li>
+					<?php elseif($v3 == 'multiple'): ?>
+                  	<li class="active">
+                      <input type="radio" name="<?= $v ?>" value="multiple">
+                      <a href="#">不连续多天</a>
+                    </li>
+                    <?php endif; ?>
+					<li>
+                      <input type="radio" name="<?= $v ?>" value="single">
+                      <a href="#">单天</a>
+                    </li>
+					<li>
+                      <input type="radio" name="<?= $v ?>" value="range">
+                      <a href="#">连续多天</a>
+                    </li>
+                  	<li>
+                      <input type="radio" name="<?= $v ?>" value="multiple">
+                      <a href="#">不连续多天</a>
+                    </li>
+                  </ul>
+                  </div>
+                </div>
+				<?php elseif ($v == "price_type"): ?>
+                <div class="col-sm-3">
+                <label><?= $v1 ?></label>
+                <div class="">
+                  <button data-toggle="dropdown" class="col-md-12 form-control btn btn-sm btn-default dropdown-toggle">
+                    <span class="dropdown-label"><?= $desc ?></span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-select">
+                  	<?php if($v3 == 'day') :?>
+                  	<li class="active">
+                      <input type="radio" name="<?= $v ?>" value="day">
+                      <a href="#">按日</a>
+                    </li>
+                    <?php elseif($v3 == 'night'): ?>
+                  	<li class="active">
+                      <input type="radio" name="<?= $v ?>" value="night">
+                      <a href="#">按夜</a>
+                    </li>
+					<?php elseif($v3 == 'person'): ?>
+                  	<li class="active">
+                      <input type="radio" name="<?= $v ?>" value="person">
+                      <a href="#">按人</a>
+                    </li>
+                    <?php endif; ?>
+					<li>
+                      <input type="radio" name="<?= $v ?>" value="day">
+                      <a href="#">按日</a>
+                    </li>
+					<li>
+                      <input type="radio" name="<?= $v ?>" value="night">
+                      <a href="#">按夜</a>
+                    </li>
+					<li>
+                      <input type="radio" name="<?= $v ?>" value="person">
+                      <a href="#">按人</a>
+                    </li>
+                  </ul>
+                  </div>
+                </div>
                 <?php elseif(in_array($v, array('id'))) : ?>
                 <?php $cnt--; ?>
             	<div class="col-sm-3" style="display:none;">

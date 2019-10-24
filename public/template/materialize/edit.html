@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="css/materialize.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<div class="row"></div>
+<div class="container">
+    <div class="row">
+        <div class="col s12 m12 l8 offset-l2">
+            <h5 class="grey-text text-darken-4 s6 m6 l6">商品编辑</h5>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 l8 offset-l2">
+            <div class="input-field">
+                <input id="name" type="text" value="西柚民宿">
+                <label for="name" class="">名称</label>
+            </div>
+        </div>
+        <div class="col s12 l8 offset-l2">
+            <div class="input-field">
+                <input id="price" type="number" value="7">
+                <label for="price" class="">最多预订</label>
+            </div>
+        </div>
+        <div class="col s12 l8 offset-l2">
+            <div class="input-field">
+                <input id="price" type="number" value="129.0">
+                <label for="price" class="">价格</label>
+            </div>
+        </div>
+        <div class="col s12 l8 offset-l2">
+            <div class="input-field">
+                <textarea id="attr" class="materialize-textarea" >
+位置    朝阳北路235号复地国际公寓922室前台，近复星国际中心 , 北京 
+品牌    【注意：请先到朝阳北路235号复地国际公寓922室前台办理入住登记后分配房间（可接至）！！！需要营养早餐入住后可扣款16元/份】】福安康新中式民宿距离朝阳医院步行仅需3分钟，位于国贸CBD核心地区，京广中心西侧200米，朝阳门蓝岛大厦东300米，全新酒店式公寓，大堂设有免费休闲区，酒店前台，咖啡厅，观光电梯等。房间全部为40-60平米独立一居室开间，独立卫生间，开放式厨房。房间均为豪华装修，落地窗，全新家具电器，高档床上用品；24小时热水，中央空调，宽带，一应俱全；房间采用电子门锁，24小时保安，公共区为图像采集区，先进的安保系统确保您的人身和财物安全；我们提供24小时的管家式服务，为您提供订票、租车、传真复印等全方位服务；公寓周边配套设施齐全，不仅有国贸商城、新光天地、世贸天阶、万达新世界、蓝岛大厦、丰联广场、太平洋百货、3.3购物中心、秀水街等购物中心；有旺市百利、华普超市、昆泰国际中心等大型超市；还有三里屯酒吧街、麦乐迪、东方斯卡拉等娱乐场所；另外，银行、医院、邮局步行均可到达；交通极为便利，步行5分钟即可到达地铁，公寓楼下就是大型公交枢纽，距首都机场近20公里，是您看病、购物、娱乐、出差下榻的理想住所。
+房内设施    床型：大床1.8m，上网方式：无线上网(免费)，面积：45-55O，楼层：2-25，窗型：有窗
+综合设施    咖啡厅，电梯，中式餐厅，吸烟区，无线上网公共区域，商店，公共休息室/电视室，24小时前台，残疾人设施，停车场，英语，叫醒服务，遮光布，隔音设施，微波炉，小厨房，独立用餐区，24小时热水，洗衣机，卫星频道/有线电视，空调，电热水壶，浴缸，吹风机，110V电压插座，书桌，暖气，小冰箱，免费洗漱用品，拖鞋，电视</textarea>
+                <label for="attr">属性</label>
+            </div>
+        </div>
+
+
+        <div class="col s12 l8 offset-l2">
+            <div class="file-field input-field">
+                <div class="btn white black-text waves-effect waves-yellow">
+                    <span>上传缩略图</span>
+                    <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path" type="text" placeholder="上传一张照片">
+                </div>
+            </div>
+        </div>
+        
+        <div class="col s12 l8 offset-l2">
+            <div class="file-field input-field">
+                <div class="btn white black-text waves-effect waves-yellow">
+                    <span>上传滑动图</span>
+                    <input type="file" multiple>
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path" type="text" placeholder="上传多张照片">
+                </div>
+            </div>
+        </div>
+        
+        <div class="row"></div>
+        <div class="col s12 l8 offset-l2">
+            <select class="browser-default">
+                <option value="1">上线</option>
+                <option value="2">下线</option>
+            </select>
+        </div>
+        
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="col s12 l8 offset-l2">
+            <a class="btn waves-effect waves-light red white-text col s12 l12 m12">更新</a>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="row"></div>
+<div class="row"></div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script>
+$("img.lazyload").lazyload();
+$(function(){    
+    $('select').material_select();
+});
+</script>
+</body>
+</html>

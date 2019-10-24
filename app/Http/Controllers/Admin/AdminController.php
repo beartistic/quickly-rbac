@@ -19,7 +19,15 @@ class AdminController extends BaseController
 	
 	public function doLogin()
     {
-	    $inputParams = $this->getInputParams("username,password", true);
+        $inputParams = $this->getInputParams("username,password", true);
+        if (empty($inputParams['username'])) {
+            $params = $this->packJson(url('admin/login'), 500, Constant::$zhLoginUsernameEmpty);
+	        return \Redirect::route('admin/info', array('msg'=>base64_encode($params)));
+        }
+        if (empty($inputParams['password'])) {
+            $params = $this->packJson(url('admin/login'), 500, Constant::$zhLoginPwdEmpty);
+	        return \Redirect::route('admin/info', array('msg'=>base64_encode($params)));
+        }
 	    BaseModel::Factory()->md5('password', $inputParams);
 	    $params = $this->packJson(url('menu/getlist'), 200, Constant::$zhLoginSuc);
         if (!User::login($inputParams)) $params = $this->packJson(url('admin/login'), 500, Constant::$zhLoginFai);
@@ -27,7 +35,8 @@ class AdminController extends BaseController
 	}
 	
 	public function doRegister()
-	{
+    {
+        return;
 	    $inputParams = $this->getInputParams("username,password", true);
 	    BaseModel::Factory()->md5('password', $inputParams);
 	    $params = $this->packJson(url('admin/login'), 200, Constant::$zhRegisterSuc);

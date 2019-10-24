@@ -19,21 +19,28 @@ class BaseController extends BasicController
         $fields = explode(',', str_replace(array(' ,',', ',' |','| '), ',', trim($fields)));
         foreach ($fields as $v) {
             $value = Input::get($v);
+            if (is_null($value))   $value = '';
             if (is_string($value)) $value = trim($value);
-            if ($value != '') $params[$v] = $value;
+            $params[$v] = $value;
             if ($is_default)  $params[$v] = $value;
         }
         return $params;
     }
     
-    public function packJson($data, $errno = 0, $errmsg = 'ok')
+    public function packJson($data, $code = 200, $msg = 'ok')
     {
         return json_encode(array(
-            'errno'  => $errno,
-            'errmsg' => $errmsg,
+            'code'   => $code,
+            'errmsg' => $msg,
             'time'   => time(),
             'data'   => $data,
         ));
+    }
+    
+    public function reponseJson($data, $code = 200, $msg = 'ok', $headers=[])
+    {
+        $package = $this->packJson($data, $code);
+        return response($package, $code, $headers);
     }
     
     public function doUnset(&$params, $keys='')
